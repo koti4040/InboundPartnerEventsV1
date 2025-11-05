@@ -1,0 +1,49 @@
+{
+    "records": [{
+        "name": "Cloud",
+        "items": [],
+        "url": "https://integration.cloud.tibco.com:443"
+    }],
+    "resources": [
+        {
+            "location": "Service Descriptors/KoreWebhookevents.WebhookEventsfromKore-LeadCreatedOrChanged.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/KoreWebhookevents.SalesRabbitLeadCreatedOrChanged-LeadCreatedOrChanged.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/KoreWebhookevents.WebhookEventReceivedFromKore-LeadCreatedOrChanged.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/KoreWebhookevents.Korewebhookevents-Korewebhookevents.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/KoreWebhookevents.KoreWebhookEvent-KoreWebhookEvent.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/KoreWebhookevents.WebhookEventReceivedFromKore-Resource.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/KoreWebhookEvents.KoreWebhookResource-KoreWebhookResource.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/KoreWebhookEvents.KoreSystemWebhookEvents-KoreSystemWebhookEvents.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/KoreWebhookEvents.KoreSystemWebhookEvents-KoreWebhookEvents.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/EeroWebhookEvents.EeroNetworkEvent-Eeronetworkevent.json",
+            "type": "generated"
+        }
+    ]
+}

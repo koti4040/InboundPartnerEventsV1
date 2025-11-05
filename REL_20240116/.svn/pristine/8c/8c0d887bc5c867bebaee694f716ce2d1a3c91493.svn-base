@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tns.tibco.com/bw/json/1688755571402" elementFormDefault="qualified" targetNamespace="http://tns.tibco.com/bw/json/1688755571402">
+  <element name="FaultMessage" type="tns:FaultMessage" />
+	<complexType name="FaultMessage">
+		<sequence>
+			<element minOccurs="0" name="ExceptionType" type="string" />
+			<element minOccurs="0" name="MessageId" type="string" />
+			<element minOccurs="0" name="Text" type="string" />
+		</sequence>
+	</complexType>
+	<element name="Error" type="tns:Error" />
+	<complexType name="Error">
+		<sequence>
+			<element minOccurs="0" maxOccurs="unbounded" name="Error"
+				type="tns:FaultMessage" />
+		</sequence>
+	</complexType>
+  <complexType name="ResponseElementType">
+    <sequence>
+      <element maxOccurs="1" minOccurs="0" name="message" type="string"/>
+    </sequence>
+  </complexType>
+  <element name="ResponseElement" type="tns:ResponseElementType"/>
+</schema>

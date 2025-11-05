@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tns.tibco.com/bw/json/1688377807004" elementFormDefault="qualified" targetNamespace="http://tns.tibco.com/bw/json/1688377807004">
+  <complexType name="SalesRabbitLeadCreationOrChangeRequestPayloadElementType">
+    <sequence>
+      <element maxOccurs="1" minOccurs="0" name="body">
+        <complexType>
+          <sequence>
+            <element maxOccurs="1" minOccurs="0" name="leadData">
+              <complexType>
+                <sequence>
+                  <element maxOccurs="1" minOccurs="0" name="appointment" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="businessName" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="city" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="country" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="customFields">
+                    <complexType>
+                      <sequence>
+                        <element maxOccurs="1" minOccurs="0" name="csaMonthlyRecurringCharges" type="double"/>
+                        <element maxOccurs="1" minOccurs="0" name="csaDueDate" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="csaInstallationFee" type="double"/>
+                        <element maxOccurs="1" minOccurs="0" name="csaArrivalWindowStartTime" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="csaArrivalWindowEndTime" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="csaBillingPhoneNumber" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="csaContactViaTextOrCall" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="csaIsChangeOrder" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="csaTerm" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="csaIsEnrolledInAcp" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="csaBroadBandMedium" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="csaFiberSpeed" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="csaStreamingCapabilities" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="csaHasYoutube" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="csaYoutubeLanguage" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="csaNumberOfGoogleChromeDevices" type="integer"/>
+                        <element maxOccurs="1" minOccurs="0" name="csaVoiceProduct" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="csaPortInPhoneNumber" type="long"/>
+                        <element maxOccurs="1" minOccurs="0" name="csaPortInAccountNumber" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="csaRecordLocatorNumber" type="integer"/>
+                        <element maxOccurs="1" minOccurs="0" name="csaDirectory" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="csaHasHomeShieldElite" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="csaHasfamilyAddOn" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="csaHasMyTechPremium" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="csaHasWholeHouseWiFi" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="csaHasEeroSecure" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="csaNumberOfEeroExtenders" type="integer"/>
+                        <element maxOccurs="1" minOccurs="0" name="csaHasPaperlessBilling" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="csaHasPaperBillWithFee" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="csaHasPaperBillNoFee" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="csaHasAutoPay" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="csaHasSpecialOfferDetails" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="csaSalesAgentId" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="csaSalesAgentName" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="csaOrderDate" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="csaOrderNumber" type="integer"/>
+                        <element maxOccurs="1" minOccurs="0" name="quoteNumber" type="integer"/>
+                      </sequence>
+                    </complexType>
+                  </element>
+                  <element maxOccurs="1" minOccurs="0" name="dateCreated" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="dateModified" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="dateOfBirth" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="email" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="firstName" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="id" type="integer"/>
+                  <element maxOccurs="1" minOccurs="0" name="lastName" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="latitude" type="double"/>
+                  <element maxOccurs="1" minOccurs="0" name="longitude" type="double"/>
+                  <element maxOccurs="1" minOccurs="0" name="notes" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="ownerModified" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="phoneAlternate" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="phonePrimary" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="state" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="status" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="statusModified" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="street1" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="street2" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="userId" type="integer"/>
+                  <element maxOccurs="1" minOccurs="0" name="userName" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="zip" type="string"/>
+                </sequence>
+              </complexType>
+            </element>
+          </sequence>
+        </complexType>
+      </element>
+    </sequence>
+  </complexType>
+  <element name="SalesRabbitLeadCreationOrChangeRequestPayloadElement" type="tns:SalesRabbitLeadCreationOrChangeRequestPayloadElementType"/>
+</schema>

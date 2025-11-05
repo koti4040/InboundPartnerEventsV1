@@ -1,0 +1,542 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "KoreWebhookResource",
+    "description" : "KoreWebhookResource service"
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/v1/inboundpartner/kore/webhookevents/chathistory" : {
+      "post" : {
+        "summary" : "postKoreWebhookResource",
+        "description" : "postKoreWebhookResource",
+        "operationId" : "post-v1-kore-webhookevents",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/Kore_MetricsElement"
+          },
+          "required" : true
+        }, {
+          "name" : "requestingApplication",
+          "in" : "header",
+          "description" : "",
+          "type" : "string",
+          "required" : false
+        }, {
+          "name" : "messageid",
+          "in" : "header",
+          "description" : "",
+          "type" : "string",
+          "required" : false
+        }, {
+          "name" : "correlationid",
+          "in" : "header",
+          "description" : "",
+          "type" : "string",
+          "required" : false
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "Kore_MetricsElement" : {
+      "type" : "object",
+      "properties" : {
+        "conversation_history" : {
+          "$ref" : "#/definitions/conversation_history"
+        },
+        "session_hisotry" : {
+          "$ref" : "#/definitions/session_hisotry"
+        },
+        "analytics" : {
+          "$ref" : "#/definitions/analytics"
+        }
+      }
+    },
+    "session_hisotry" : {
+      "type" : "object",
+      "properties" : {
+        "sessions" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/sessions",
+            "uniqueItems" : false
+          }
+        }
+      }
+    },
+    "sessions" : {
+      "type" : "object",
+      "properties" : {
+        "sessionId" : {
+          "type" : "string"
+        },
+        "botId" : {
+          "type" : "string"
+        },
+        "channel" : {
+          "type" : "string"
+        },
+        "userId" : {
+          "type" : "string"
+        },
+        "start_time" : {
+          "type" : "string"
+        },
+        "end_time" : {
+          "type" : "string"
+        },
+        "session_lang" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string",
+            "uniqueItems" : false
+          }
+        },
+        "sessionType" : {
+          "type" : "string"
+        },
+        "isDeveloper" : {
+          "type" : "boolean"
+        },
+        "sessionStatus" : {
+          "type" : "string"
+        },
+        "tags" : {
+          "$ref" : "#/definitions/tags"
+        },
+        "noOfMessagesExchanged" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "noOfTasksExecuted" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "containmentType" : {
+          "type" : "string"
+        }
+      }
+    },
+    "components" : {
+      "type" : "object",
+      "properties" : {
+        "_id" : {
+          "type" : "string"
+        },
+        "cT" : {
+          "type" : "string"
+        },
+        "data" : {
+          "$ref" : "#/definitions/data"
+        },
+        "thumbnails" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string",
+            "uniqueItems" : false
+          }
+        }
+      }
+    },
+    "data" : {
+      "type" : "object",
+      "properties" : {
+        "text" : {
+          "type" : "string"
+        }
+      }
+    },
+    "NLAnalysis" : {
+      "type" : "object",
+      "properties" : {
+        "debugTitle" : {
+          "type" : "string"
+        },
+        "result" : {
+          "type" : "string"
+        },
+        "messageStoreId" : {
+          "type" : "string"
+        },
+        "channelId" : {
+          "type" : "string"
+        },
+        "bot" : {
+          "type" : "string"
+        },
+        "botid" : {
+          "type" : "string"
+        },
+        "task" : {
+          "type" : "string"
+        },
+        "botLanguage" : {
+          "type" : "string"
+        },
+        "nluLanguage" : {
+          "type" : "string"
+        },
+        "taskId" : {
+          "type" : "string"
+        },
+        "intentStatus" : {
+          "type" : "string"
+        },
+        "subType" : {
+          "type" : "string"
+        },
+        "channelInfo" : {
+          "type" : "string"
+        },
+        "input" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string",
+            "uniqueItems" : false
+          }
+        },
+        "identifiedVia" : {
+          "type" : "string"
+        },
+        "NLAnalysis" : {
+          "$ref" : "#/definitions/NLAnalysis"
+        },
+        "channelDispName" : {
+          "type" : "string"
+        },
+        "language" : {
+          "type" : "string"
+        },
+        "channel" : {
+          "type" : "string"
+        },
+        "userId" : {
+          "type" : "string"
+        },
+        "time" : {
+          "type" : "string"
+        },
+        "preferredChannelForResponse" : {
+          "type" : "string"
+        },
+        "_id" : {
+          "type" : "string"
+        },
+        "resourceid" : {
+          "type" : "string"
+        },
+        "entityOrgId" : {
+          "type" : "string"
+        },
+        "iv" : {
+          "type" : "string"
+        },
+        "cek" : {
+          "$ref" : "#/definitions/cek"
+        },
+        "ire" : {
+          "type" : "boolean"
+        }
+      }
+    },
+    "sessionTags" : {
+      "type" : "object",
+      "properties" : {
+        "value" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        }
+      }
+    },
+    "cek" : {
+      "type" : "object",
+      "properties" : {
+        "header" : {
+          "$ref" : "#/definitions/header"
+        }
+      }
+    },
+    "conversation_history" : {
+      "type" : "object",
+      "properties" : {
+        "messages" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/messages",
+            "uniqueItems" : false
+          }
+        }
+      }
+    },
+    "successintents" : {
+      "type" : "object",
+      "properties" : {
+        "result" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/result",
+            "uniqueItems" : false
+          }
+        }
+      }
+    },
+    "tags" : {
+      "type" : "object",
+      "properties" : {
+        "messageTags" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string",
+            "uniqueItems" : false
+          }
+        },
+        "userTags" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string",
+            "uniqueItems" : false
+          }
+        },
+        "sessionTags" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/sessionTags",
+            "uniqueItems" : false
+          }
+        }
+      }
+    },
+    "analytics" : {
+      "type" : "object",
+      "properties" : {
+        "successintents" : {
+          "$ref" : "#/definitions/successintents"
+        }
+      }
+    },
+    "result" : {
+      "type" : "object",
+      "properties" : {
+        "_id" : {
+          "type" : "string"
+        },
+        "messageId" : {
+          "type" : "string"
+        },
+        "sessionId" : {
+          "type" : "string"
+        },
+        "utterance" : {
+          "type" : "string"
+        },
+        "intent" : {
+          "type" : "string"
+        },
+        "userId" : {
+          "type" : "string"
+        },
+        "channelUId" : {
+          "type" : "string"
+        },
+        "language" : {
+          "type" : "string"
+        },
+        "timestamp" : {
+          "type" : "string"
+        },
+        "pinned" : {
+          "type" : "boolean"
+        },
+        "channel" : {
+          "type" : "string"
+        },
+        "winningIntent" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string",
+            "uniqueItems" : false
+          }
+        },
+        "isAmbiguous" : {
+          "type" : "boolean"
+        },
+        "ambiguousIntents" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string",
+            "uniqueItems" : false
+          }
+        },
+        "taskName" : {
+          "type" : "string"
+        },
+        "flow" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string",
+            "uniqueItems" : false
+          }
+        },
+        "taskId" : {
+          "type" : "string"
+        },
+        "koralogstatusId" : {
+          "type" : "string"
+        },
+        "customTags" : {
+          "$ref" : "#/definitions/customTags"
+        },
+        "NLAnalysis" : {
+          "$ref" : "#/definitions/NLAnalysis"
+        }
+      }
+    },
+    "customTags" : {
+      "type" : "object",
+      "properties" : {
+        "userTags" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string",
+            "uniqueItems" : false
+          }
+        },
+        "sessionTags" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/sessionTags",
+            "uniqueItems" : false
+          }
+        },
+        "messageTags" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string",
+            "uniqueItems" : false
+          }
+        }
+      }
+    },
+    "channels" : {
+      "type" : "object",
+      "properties" : {
+        "to" : {
+          "type" : "string"
+        },
+        "type" : {
+          "type" : "string"
+        }
+      }
+    },
+    "messages" : {
+      "type" : "object",
+      "properties" : {
+        "_id" : {
+          "type" : "string"
+        },
+        "type" : {
+          "type" : "string"
+        },
+        "status" : {
+          "type" : "string"
+        },
+        "lmodifiedOn" : {
+          "type" : "string"
+        },
+        "createdBy" : {
+          "type" : "string"
+        },
+        "channels" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/channels",
+            "uniqueItems" : false
+          }
+        },
+        "components" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/components",
+            "uniqueItems" : false
+          }
+        },
+        "channel" : {
+          "type" : "string"
+        },
+        "botId" : {
+          "type" : "string"
+        },
+        "orgId" : {
+          "type" : "string"
+        },
+        "accountId" : {
+          "type" : "string"
+        },
+        "isBB" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "isD" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "ms" : {
+          "type" : "string"
+        },
+        "createdOn" : {
+          "type" : "string"
+        },
+        "timestampValue" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "sessionId" : {
+          "type" : "string"
+        },
+        "__v" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "resourceid" : {
+          "type" : "string"
+        },
+        "tags" : {
+          "$ref" : "#/definitions/tags"
+        }
+      }
+    },
+    "header" : {
+      "type" : "object",
+      "properties" : {
+        "alg" : {
+          "type" : "string"
+        },
+        "enc" : {
+          "type" : "string"
+        },
+        "kid" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

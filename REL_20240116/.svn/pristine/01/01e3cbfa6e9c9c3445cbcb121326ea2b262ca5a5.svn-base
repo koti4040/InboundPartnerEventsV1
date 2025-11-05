@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tns.tibco.com/bw/json/1688618052894" elementFormDefault="qualified" targetNamespace="http://tns.tibco.com/bw/json/1688618052894">
+  <element name="FaultMessage" type="tns:FaultMessage" />
+	<complexType name="FaultMessage">
+		<sequence>
+			<element minOccurs="0" name="ExceptionType" type="string" />
+			<element minOccurs="0" name="MessageId" type="string" />
+			<element minOccurs="0" name="Text" type="string" />
+		</sequence>
+	</complexType>
+	<element name="Error" type="tns:Error" />
+	<complexType name="Error">
+		<sequence>
+			<element minOccurs="0" maxOccurs="unbounded" name="Error"
+				type="tns:FaultMessage" />
+		</sequence>
+	</complexType>
+  <complexType name="SalesRabbitCreatedOrChangedElementType">
+    <sequence>
+      <element maxOccurs="1" minOccurs="0" name="data">
+        <complexType>
+          <sequence>
+            <element maxOccurs="1" minOccurs="0" name="id" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="userName" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="userId" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="firstName" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="lastName" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="phonePrimary" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="phoneAlternate" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="email" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="street1" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="street2" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="city" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="state" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="zip" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="country" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="latitude" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="longitude" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="status" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="notes" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="customFields">
+              <complexType>
+                <sequence>
+                  <element maxOccurs="1" minOccurs="0" name="spouseName" type="string"/>
+                </sequence>
+              </complexType>
+            </element>
+            <element maxOccurs="1" minOccurs="0" name="businessName" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="appointment" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="statusModified" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="dateCreated" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="dateModified" type="string"/>
+          </sequence>
+        </complexType>
+      </element>
+    </sequence>
+  </complexType>
+  <element name="SalesRabbitCreatedOrChangedElement" type="tns:SalesRabbitCreatedOrChangedElementType"/>
+</schema>

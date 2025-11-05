@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xs:schema xmlns:Q1="http://tns.tibco.com/bw/REST" xmlns:source="bw.rest" xmlns:tns="http://xmlns.example.com/SalesRabbitLeadDelete/headerParameters" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" targetNamespace="http://xmlns.example.com/SalesRabbitLeadDelete/headerParameters">
+                    
+  
+  
+  
+  
+  
+  
+  
+  
+  <xs:import namespace="http://tns.tibco.com/bw/REST" schemaLocation="RESTSchema.xsd"/>
+                    
+  
+  
+  
+  
+  
+  
+  
+  
+  <xs:complexType name="salesrabbitleaddeleteDeleteHeaderType">
+                                        
+    
+    
+    
+    
+    
+    
+    
+    
+    <xs:complexContent>
+                                                            
+      
+      
+      
+      
+      
+      
+      
+      
+      <xs:extension base="Q1:httpTransportHeaders">
+                                                                                
+        
+        
+        
+        
+        
+        
+        
+        
+        <xs:sequence>
+                                                                                                    
+          
+          
+          
+          
+          
+          
+          
+          
+          <xs:element maxOccurs="1" minOccurs="0" name="requestingApplication" type="xs:string"/>
+                                                                                                  
+                    
+          
+          
+                                              
+        
+        
+        
+                    
+          
+          
+          
+          <xs:element maxOccurs="1" minOccurs="0" name="messageid" type="xs:string"/>
+                                                        
+                    
+          
+          
+          <xs:element maxOccurs="1" minOccurs="0" name="correlationid" type="xs:string"/>
+                                              
+        
+        
+        </xs:sequence>
+                                                                              
+      
+      
+      
+      
+      
+      
+      
+      
+      </xs:extension>
+                                                          
+    
+    
+    
+    
+    
+    
+    
+    
+    </xs:complexContent>
+                                      
+  
+  
+  
+  
+  
+  
+  
+  
+  </xs:complexType>
+                    
+  
+  
+  
+  
+  
+  
+  
+  
+  <xs:element name="salesrabbitleaddeleteDeleteHeader" type="tns:salesrabbitleaddeleteDeleteHeaderType"/>
+                  
+
+
+
+
+
+
+
+
+</xs:schema>

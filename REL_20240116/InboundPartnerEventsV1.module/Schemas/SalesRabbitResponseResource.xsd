@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tns.tibco.com/bw/json/1693425542121" elementFormDefault="qualified" targetNamespace="http://tns.tibco.com/bw/json/1693425542121">
+ <complexType name="SalesRabbitResponseElementType">
+    <sequence>
+      <element maxOccurs="unbounded" minOccurs="0" name="data">
+        <complexType>
+          <sequence>
+            <element maxOccurs="1" minOccurs="0" name="appointment" nillable="true" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="businessName" nillable="true" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="city" nillable="true" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="country" nillable="true" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="customFields">
+              <complexType>
+                <sequence/>
+              </complexType>
+            </element>
+            <element maxOccurs="1" minOccurs="0" name="dateCreated" nillable="true" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="dateModified" nillable="true" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="dateOfBirth" nillable="true" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="email" nillable="true" type="string"/>
+            <element maxOccurs="unbounded" minOccurs="0" name="files" nillable="true" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="firstName" nillable="true" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="id" nillable="true" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="lastName" nillable="true" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="latitude" nillable="true" type="double"/>
+            <element maxOccurs="1" minOccurs="0" name="longitude" nillable="true" type="double"/>
+            <element maxOccurs="1" minOccurs="0" name="notes" nillable="true" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="ownerModified" nillable="true" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="phoneAlternate" nillable="true" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="phonePrimary" nillable="true" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="state" nillable="true" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="status" nillable="true" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="statusModified" nillable="true" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="street1" nillable="true" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="street2" nillable="true" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="userId" nillable="true" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="userName" nillable="true" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="zip" nillable="true" type="string"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element maxOccurs="1" minOccurs="0" name="meta">
+        <complexType>
+          <sequence>
+            <element maxOccurs="1" minOccurs="0" name="currentPage" nillable="true" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="morePages" nillable="true" type="boolean"/>
+            <element maxOccurs="1" minOccurs="0" name="resultsPerPage" nillable="true" type="integer"/>
+          </sequence>
+        </complexType>
+      </element>
+    </sequence>
+  </complexType>
+  <element name="SalesRabbitResponseElement" type="tns:SalesRabbitResponseElementType"/>
+</schema>

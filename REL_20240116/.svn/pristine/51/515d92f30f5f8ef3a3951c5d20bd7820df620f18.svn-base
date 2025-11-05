@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:http="http://xsd.tns.tibco.com/bw/models/sharedresource/httpclient" xmlns:id="http://www.tibco.com/ws/2013/11/identity" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmlns:sca_ext="http://www.tibco.com/ns/sca/201311" xmlns:sslclient="http://xsd.tns.tibco.com/bw/sharedresource/trinity/models/sslclient" xmlns:subject="http://xsd.tns.tibco.com/bw/sharedresource/trinity/models/identity/subject" xmi:id="_4d4oUflWEe2zz7GoGbcDQg" name="Inboundpartnereventsv1.module.HttpClientResourceSalesRabbit" type="http:HttpClientConfiguration">
+  <identitySet xmi:id="_UG7cUAF4Ee6l36KgCEWrNA" appliesTo="namedResource" name="HttpClientIdentitySet" provides="confidentiality">
+    <sca_ext:intentMap xmi:id="_UG7cUQF4Ee6l36KgCEWrNA" provides="sca_ext:confidentiality">
+      <sca_ext:qualifier xmi:id="_UG7cUgF4Ee6l36KgCEWrNA" name="transport">
+        <id:IdentityReference xmi:id="_UG8DYAF4Ee6l36KgCEWrNA" URI="Identity.ApigeeId" type="subject:SubjectConfiguration"/>
+        <id:IdentityReference xmi:id="_V509UAF4Ee6l36KgCEWrNA" URI="SSLclient.SSLClient" type="sslclient:SSLClientConfiguration"/>
+      </sca_ext:qualifier>
+    </sca_ext:intentMap>
+  </identitySet>
+  <jndi:configuration xsi:type="http:HttpClientConfiguration" xmi:id="_4d5PYPlWEe2zz7GoGbcDQg" useSSL="true" httpClientVersion="httpcomponents" retryCount="3" idleConnectionTimeout="3000" hystrixCommandName="partnereventsv1.module.HttpClientResourceContactEngine" cmdExecutionIsolationStrategy="COUNT_BASED" cmdExecutionIsolationTimeout="10" cmdExecutionIsolationInterruptOnTimeout="true" cmdExecutionIsolationSemaphoreMaxConcRequests="8" cmdCircuitBreakerRequestVolumeThreshold="50" cmdCircuitBreakerSleepWindow="100" cmdCircuitBreakerErrorThresholdPercentage="100" cmdMetricsRollingStatsTime="100" cmdMetricsRollingStatsNumBuckets="60000" cmdMetricsHealthSnapshotInterval="500" tpCoreSize="10" tpMaxQueueSize="60000" tpQueueSizeRejectionThreshold="6000" tpKeepAliveTime="1">
+    <tcpDetails xmi:id="_4d5PYflWEe2zz7GoGbcDQg">
+      <substitutionBindings xmi:id="__1xmcPlXEe2zz7GoGbcDQg" template="host" propName="/InboundPartnerEventsV1/Connections/SalesRabbit/host"/>
+      <substitutionBindings xmi:id="_UUcDAPlYEe2zz7GoGbcDQg" template="port" propName="/InboundPartnerEventsV1/Connections/SalesRabbit/port"/>
+    </tcpDetails>
+  </jndi:configuration>
+</jndi:namedResource>

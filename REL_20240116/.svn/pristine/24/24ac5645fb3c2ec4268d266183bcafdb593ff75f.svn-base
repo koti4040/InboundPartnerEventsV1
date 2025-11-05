@@ -1,0 +1,16 @@
+bin.includes = .,\
+               .settings/,\
+               META-INF/,\
+               Policies/,\
+               Processes/,\
+               Resources/,\
+               Schemas/,\
+               Service Descriptors/,\
+               .WebResources/,\
+               lib/,\
+               bin/,\
+               pom.xml
+source.. = src/
+src.includes = bin/,\
+               lib/
+javacTarget = 1.2

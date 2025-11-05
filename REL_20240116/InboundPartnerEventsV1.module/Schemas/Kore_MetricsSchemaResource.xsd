@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tns.tibco.com/bw/json/1691158222661" elementFormDefault="qualified" targetNamespace="http://tns.tibco.com/bw/json/1691158222661">
+	<complexType name="Kore_MetricsSchemaElementType">
+		<sequence>
+			<element maxOccurs="1" minOccurs="0" name="conversation_history">
+				<complexType>
+					<sequence>
+						<element maxOccurs="unbounded" minOccurs="0" name="messages" nillable="true">
+							<complexType>
+								<sequence>
+									<element maxOccurs="1" minOccurs="0" name="_id" nillable="true" type="string"/>
+									<element maxOccurs="1" minOccurs="0" name="type" nillable="true" type="string"/>
+									<element maxOccurs="1" minOccurs="0" name="status" nillable="true" type="string"/>
+									<element maxOccurs="1" minOccurs="0" name="lmodifiedOn" nillable="true" type="string"/>
+									<element maxOccurs="1" minOccurs="0" name="createdBy" nillable="true" type="string"/>
+									<element maxOccurs="unbounded" minOccurs="0" name="channels">
+										<complexType>
+											<sequence>
+												<element maxOccurs="1" minOccurs="0" name="to" nillable="true" type="string"/>
+												<element maxOccurs="1" minOccurs="0" name="type" nillable="true" type="string"/>
+											</sequence>
+										</complexType>
+									</element>
+									<element maxOccurs="unbounded" minOccurs="0" name="components" nillable="true">
+										<complexType>
+											<sequence>
+												<element maxOccurs="1" minOccurs="0" name="_id" nillable="true" type="string"/>
+												<element maxOccurs="1" minOccurs="0" name="cT" nillable="true" type="string"/>
+												<element maxOccurs="1" minOccurs="0" name="data" nillable="true">
+													<complexType>
+														<sequence>
+															<element maxOccurs="1" minOccurs="0" name="text" nillable="true" type="string"/>
+														</sequence>
+													</complexType>
+												</element>
+												<element maxOccurs="unbounded" minOccurs="0" name="thumbnails" nillable="true" type="string"/>
+											</sequence>
+										</complexType>
+									</element>
+									<element maxOccurs="1" minOccurs="0" name="channel" nillable="true" type="string"/>
+									<element maxOccurs="1" minOccurs="0" name="botId" nillable="true" type="string"/>
+									<element maxOccurs="1" minOccurs="0" name="orgId" nillable="true" type="string"/>
+									<element maxOccurs="1" minOccurs="0" name="accountId" nillable="true" type="string"/>
+									<element maxOccurs="1" minOccurs="0" name="isBB" nillable="true" type="integer"/>
+									<element maxOccurs="1" minOccurs="0" name="isD" nillable="true" type="integer"/>
+									<element maxOccurs="1" minOccurs="0" name="ms" nillable="true" type="string"/>
+									<element maxOccurs="1" minOccurs="0" name="createdOn" nillable="true" type="string"/>
+									<element maxOccurs="1" minOccurs="0" name="timestampValue" nillable="true" type="long"/>
+									<element maxOccurs="1" minOccurs="0" name="sessionId" nillable="true" type="string"/>
+									<element maxOccurs="1" minOccurs="0" name="__v" nillable="true" type="integer"/>
+									<element maxOccurs="1" minOccurs="0" name="resourceid" nillable="true" type="string"/>
+									<element maxOccurs="1" minOccurs="0" name="tags" nillable="true">
+										<complexType>
+											<sequence>
+												<element maxOccurs="unbounded" minOccurs="0" name="messageTags" nillable="true">
+												<complexType>
+														<sequence>
+															<element maxOccurs="1" minOccurs="0" name="value" nillable="true" type="string"/>
+															<element maxOccurs="1" minOccurs="0" name="name" nillable="true" type="string"/>
+														</sequence>
+													</complexType>
+												</element>
+												<element maxOccurs="unbounded" minOccurs="0" name="userTags" nillable="true">
+												<complexType>
+														<sequence>
+															<element maxOccurs="1" minOccurs="0" name="value" nillable="true" type="string"/>
+															<element maxOccurs="1" minOccurs="0" name="name" nillable="true" type="string"/>
+														</sequence>
+													</complexType>
+												</element>
+												<element maxOccurs="unbounded" minOccurs="0" name="sessionTags" nillable="true">
+													<complexType>
+														<sequence>
+															<element maxOccurs="1" minOccurs="0" name="value" nillable="true" type="string"/>
+															<element maxOccurs="1" minOccurs="0" name="name" nillable="true" type="string"/>
+														</sequence>
+													</complexType>
+												</element>
+											</sequence>
+										</complexType>
+									</element>
+								</sequence>
+							</complexType>
+						</element>
+					</sequence>
+				</complexType>
+			</element>
+			<element maxOccurs="1" minOccurs="0" name="session_history">
+				<complexType>
+					<sequence>
+						<element maxOccurs="unbounded" minOccurs="0" name="sessions" nillable="true">
+							<complexType>
+								<sequence>
+									<element maxOccurs="1" minOccurs="0" name="sessionId" nillable="true" type="string"/>
+									<element maxOccurs="1" minOccurs="0" name="botId" nillable="true" type="string"/>
+									<element maxOccurs="1" minOccurs="0" name="channel" nillable="true" type="string"/>
+									<element maxOccurs="1" minOccurs="0" name="userId" nillable="true" type="string"/>
+									<element maxOccurs="1" minOccurs="0" name="start_time" nillable="true" type="string"/>
+									<element maxOccurs="1" minOccurs="0" name="end_time" nillable="true" type="string"/>
+									<element maxOccurs="unbounded" minOccurs="0" name="session_lang" nillable="true" type="string"/>
+									<element maxOccurs="1" minOccurs="0" name="sessionType" nillable="true" type="string"/>
+									<element maxOccurs="1" minOccurs="0" name="isDeveloper" nillable="true" type="boolean"/>
+									<element maxOccurs="1" minOccurs="0" name="sessionStatus" nillable="true" type="string"/>
+									<element maxOccurs="1" minOccurs="0" name="tags">
+										<complexType>
+											<sequence>
+												<element maxOccurs="unbounded" minOccurs="0" name="userTags" nillable="true">
+												<complexType>
+														<sequence>
+															<element maxOccurs="1" minOccurs="0" name="value" nillable="true" type="string"/>
+															<element maxOccurs="1" minOccurs="0" name="name" nillable="true" type="string"/>
+														</sequence>
+													</complexType>
+												</element>
+												<element maxOccurs="unbounded" minOccurs="0" name="sessionTags" nillable="true">
+													<complexType>
+														<sequence>
+															<element maxOccurs="1" minOccurs="0" name="value" nillable="true" type="string"/>
+															<element maxOccurs="1" minOccurs="0" name="name" nillable="true" type="string"/>
+														</sequence>
+													</complexType>
+												</element>
+											</sequence>
+										</complexType>
+									</element>
+									<element maxOccurs="1" minOccurs="0" name="noOfMessagesExchanged" nillable="true" type="integer"/>
+									<element maxOccurs="1" minOccurs="0" name="noOfTasksExecuted" nillable="true" type="integer"/>
+									<element maxOccurs="1" minOccurs="0" name="containmentType" nillable="true" type="string"/>
+								</sequence>
+							</complexType>
+						</element>
+					</sequence>
+				</complexType>
+			</element>
+			<element maxOccurs="1" minOccurs="0" name="analytics">
+				<complexType>
+					<sequence>
+						<element maxOccurs="1" minOccurs="0" name="successintents" nillable="true">
+							<complexType>
+								<sequence>
+									<element maxOccurs="unbounded" minOccurs="0" name="result" nillable="true">
+										<complexType>
+											<sequence>
+												<element maxOccurs="1" minOccurs="0" name="_id" nillable="true" type="string"/>
+												<element maxOccurs="1" minOccurs="0" name="messageId" nillable="true" type="string"/>
+												<element maxOccurs="1" minOccurs="0" name="sessionId" nillable="true" type="string"/>
+												<element maxOccurs="1" minOccurs="0" name="chatSessionId" nillable="true" type="string"/>
+												<element maxOccurs="1" minOccurs="0" name="utterance" nillable="true" type="string"/>
+												<element maxOccurs="1" minOccurs="0" name="intent" nillable="true" type="string"/>
+												<element maxOccurs="1" minOccurs="0" name="userId" nillable="true" type="string"/>
+												<element maxOccurs="1" minOccurs="0" name="channelUId" nillable="true" type="string"/>
+												<element maxOccurs="1" minOccurs="0" name="language" nillable="true" type="string"/>
+												<element maxOccurs="1" minOccurs="0" name="timestamp" nillable="true" type="string"/>
+												<element maxOccurs="1" minOccurs="0" name="pinned" nillable="true" type="boolean"/>
+												<element maxOccurs="1" minOccurs="0" name="channel" nillable="true" type="string"/>
+												<element maxOccurs="unbounded" minOccurs="0" name="winningIntent" nillable="true" type="string"/>
+												<element maxOccurs="1" minOccurs="0" name="isAmbiguous" nillable="true" type="boolean"/>
+												<element maxOccurs="unbounded" minOccurs="0" name="ambiguousIntents" nillable="true" type="string"/>
+												<element maxOccurs="1" minOccurs="0" name="taskName" nillable="true" type="string"/>
+												<element maxOccurs="unbounded" minOccurs="0" name="flow" nillable="true" type="string"/>
+												<element maxOccurs="1" minOccurs="0" name="taskId" nillable="true" type="string"/>
+												<element maxOccurs="1" minOccurs="0" name="koralogstatusId" nillable="true" type="string"/>
+												<element maxOccurs="1" minOccurs="0" name="customTags" nillable="true">
+													<complexType>
+														<sequence>
+															<element maxOccurs="unbounded" minOccurs="0" name="userTags" nillable="true">
+															<complexType>
+														<sequence>
+															<element maxOccurs="1" minOccurs="0" name="value" nillable="true" type="string"/>
+															<element maxOccurs="1" minOccurs="0" name="name" nillable="true" type="string"/>
+														</sequence>
+													</complexType>
+												</element>
+															<element maxOccurs="unbounded" minOccurs="0" name="sessionTags" nillable="true">
+																<complexType>
+																	<sequence>
+																		<element maxOccurs="1" minOccurs="0" name="name" nillable="true" type="string"/>
+																		<element maxOccurs="1" minOccurs="0" name="value" nillable="true" type="string"/>
+																	</sequence>
+																</complexType>
+															</element>
+															<element maxOccurs="unbounded" minOccurs="0" name="messageTags" nillable="true">
+															<complexType>
+														<sequence>
+															<element maxOccurs="1" minOccurs="0" name="value" nillable="true" type="string"/>
+															<element maxOccurs="1" minOccurs="0" name="name" nillable="true" type="string"/>
+														</sequence>
+													</complexType>
+												</element>
+														</sequence>
+													</complexType>
+												</element>
+												<element maxOccurs="1" minOccurs="0" name="NLAnalysis" nillable="true">
+													<complexType>
+														<sequence>
+															<element maxOccurs="1" minOccurs="0" name="debugTitle" nillable="true" type="string"/>
+															<element maxOccurs="1" minOccurs="0" name="result" nillable="true" type="string"/>
+															<element maxOccurs="1" minOccurs="0" name="messageStoreId" nillable="true" type="string"/>
+															<element maxOccurs="1" minOccurs="0" name="channelId" nillable="true" type="string"/>
+															<element maxOccurs="1" minOccurs="0" name="bot" nillable="true" type="string"/>
+															<element maxOccurs="1" minOccurs="0" name="botid" nillable="true" type="string"/>
+															<element maxOccurs="1" minOccurs="0" name="task" nillable="true" type="string"/>
+															<element maxOccurs="1" minOccurs="0" name="botLanguage" nillable="true" type="string"/>
+															<element maxOccurs="1" minOccurs="0" name="nluLanguage" nillable="true" type="string"/>
+															<element maxOccurs="1" minOccurs="0" name="taskId" nillable="true" type="string"/>
+															<element maxOccurs="1" minOccurs="0" name="intentStatus" nillable="true" type="string"/>
+															<element maxOccurs="1" minOccurs="0" name="subType" nillable="true" type="string"/>
+															<element maxOccurs="1" minOccurs="0" name="channelInfo" nillable="true" type="string"/>
+															<element maxOccurs="unbounded" minOccurs="0" name="input" nillable="true" type="string"/>
+															<element maxOccurs="1" minOccurs="0" name="identifiedVia" nillable="true" type="string"/>
+															<element maxOccurs="1" minOccurs="0" name="channelDispName" nillable="true" type="string"/>
+															<element maxOccurs="1" minOccurs="0" name="language" nillable="true" type="string"/>
+															<element maxOccurs="1" minOccurs="0" name="channel" nillable="true" type="string"/>
+															<element maxOccurs="1" minOccurs="0" name="userId" nillable="true" type="string"/>
+															<element maxOccurs="1" minOccurs="0" name="time" nillable="true" type="string"/>
+															<element maxOccurs="1" minOccurs="0" name="preferredChannelForResponse" nillable="true" type="string"/>
+															<element maxOccurs="1" minOccurs="0" name="_id" nillable="true" type="string"/>
+															<element maxOccurs="1" minOccurs="0" name="resourceid" nillable="true" type="string"/>
+															<element maxOccurs="1" minOccurs="0" name="entityOrgId" nillable="true" type="string"/>
+															<element maxOccurs="1" minOccurs="0" name="iv" nillable="true" type="string"/>
+															<element maxOccurs="1" minOccurs="0" name="cek">
+																<complexType>
+																	<sequence>
+																		<element maxOccurs="1" minOccurs="0" name="header">
+																			<complexType>
+																				<sequence>
+																					<element maxOccurs="1" minOccurs="0" name="alg" nillable="true" type="string"/>
+																					<element maxOccurs="1" minOccurs="0" name="enc" nillable="true" type="string"/>
+																					<element maxOccurs="1" minOccurs="0" name="kid" nillable="true" type="string"/>
+																				</sequence>
+																			</complexType>
+																		</element>
+																	</sequence>
+																</complexType>
+															</element>
+															<element maxOccurs="1" minOccurs="0" name="ire" nillable="true" type="boolean"/>
+														</sequence>
+													</complexType>
+												</element>
+											</sequence>
+										</complexType>
+									</element>
+								</sequence>
+							</complexType>
+						</element>
+					</sequence>
+				</complexType>
+			</element>
+			<element minOccurs="0" name="ApgCorrelationid" type="string"/>
+		</sequence>
+	</complexType>
+	<element name="Kore_MetricsSchemaElement" type="tns:Kore_MetricsSchemaElementType"/>
+</schema>

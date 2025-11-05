@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tns.tibco.com/bw/json/1699476825404" elementFormDefault="qualified" targetNamespace="http://tns.tibco.com/bw/json/1699476825404">
+  <complexType name="EeroNetworkEvent_MainPayloadElementType">
+    <sequence>
+      <element maxOccurs="1" minOccurs="0" name="NetworkCreated">
+        <complexType>
+          <sequence>
+            <element maxOccurs="1" minOccurs="0" name="contextData">
+              <complexType>
+                <sequence>
+                  <element maxOccurs="1" minOccurs="0" name="event" nillable="true" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="network_id" nillable="true" type="integer"/>
+                  <element maxOccurs="1" minOccurs="0" name="timestamp" nillable="true" type="string"/>
+                </sequence>
+              </complexType>
+            </element>
+          </sequence>
+        </complexType>
+      </element>
+      <element maxOccurs="1" minOccurs="0" name="AddedToNetwork">
+        <complexType>
+          <sequence>
+            <element maxOccurs="1" minOccurs="0" name="contextData">
+              <complexType>
+                <sequence>
+                  <element maxOccurs="1" minOccurs="0" name="event" nillable="true" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="network_id" nillable="true" type="integer"/>
+                  <element maxOccurs="1" minOccurs="0" name="eero_serial" nillable="true" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="public_ip" nillable="true" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="partner_account_id" nillable="true" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="timestamp" nillable="true" type="string"/>
+                </sequence>
+              </complexType>
+            </element>
+          </sequence>
+        </complexType>
+      </element>
+      <element maxOccurs="1" minOccurs="0" name="PubliclpUpdated">
+        <complexType>
+          <sequence>
+            <element maxOccurs="1" minOccurs="0" name="contextData">
+              <complexType>
+                <sequence>
+                  <element maxOccurs="1" minOccurs="0" name="event" nillable="true" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="network_id" nillable="true" type="integer"/>
+                  <element maxOccurs="1" minOccurs="0" name="public_ip" nillable="true" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="timestamp" nillable="true" type="string"/>
+                </sequence>
+              </complexType>
+            </element>
+          </sequence>
+        </complexType>
+      </element>
+      <element minOccurs="0" name="ApgCorrelationid" type="string"/>
+    </sequence>
+  </complexType>
+  <element name="EeroNetworkEvent_MainPayloadElement" type="tns:EeroNetworkEvent_MainPayloadElementType"/>
+</schema>

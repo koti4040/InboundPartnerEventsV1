@@ -1,0 +1,43 @@
+{"records": [
+    {
+        "jsonSchemaLocation": "/InboundPartnerEventsV1.module/Service Descriptors/KoreWebhookevents.KoreWebhookEvent-KoreWebhookEvent.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://tns.tibco.com/bw/json/1690268903310"
+    },
+    {
+        "jsonSchemaLocation": "/InboundPartnerEventsV1.module/Service Descriptors/KoreWebhookEvents.KoreWebhookResource-KoreWebhookResource.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://tns.tibco.com/bw/json/1691081026260"
+    },
+    {
+        "jsonSchemaLocation": "/InboundPartnerEventsV1.module/Service Descriptors/KoreWebhookEvents.KoreSystemWebhookEvents-KoreSystemWebhookEvents.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://tns.tibco.com/bw/json/1691081026260"
+    },
+    {
+        "jsonSchemaLocation": "/InboundPartnerEventsV1.module/Service Descriptors/KoreWebhookEvents.KoreSystemWebhookEvents-KoreWebhookEvents.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://tns.tibco.com/bw/json/1691081026260"
+    },
+    {
+        "jsonSchemaLocation": "/InboundPartnerEventsV1.module/Service Descriptors/KoreWebhookEvents.KoreSystemWebhookEvents-KoreWebhookEvents.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://tns.tibco.com/bw/json/1688749564835"
+    },
+    {
+        "jsonSchemaLocation": "/InboundPartnerEventsV1.module/Service Descriptors/KoreWebhookEvents.KoreSystemWebhookEvents-KoreWebhookEvents.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://tns.tibco.com/bw/json/1688755571402"
+    },
+    {
+        "jsonSchemaLocation": "/InboundPartnerEventsV1.module/Service Descriptors/KoreWebhookEvents.KoreSystemWebhookEvents-KoreWebhookEvents.json",
+        "conversionType": "linked",
+        "xsdSchemaLocation": "/InboundPartnerEventsV1.module/Schemas/RESTSchema.xsd",
+        "xsdSchemaTargetNamespace": "http://tns.tibco.com/bw/REST"
+    },
+    {
+        "jsonSchemaLocation": "/InboundPartnerEventsV1.module/Service Descriptors/EeroWebhookEvents.EeroNetworkEvent-Eeronetworkevent.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://tns.tibco.com/bw/json/1688755571402"
+    }
+]}

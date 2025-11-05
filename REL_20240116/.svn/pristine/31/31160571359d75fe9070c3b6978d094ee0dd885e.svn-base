@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:httpconnector="http://xsd.tns.tibco.com/bw/models/sharedresource/httpconnector" xmlns:json_1688618052894="http://tns.tibco.com/bw/json/1688618052894" xmlns:json_1688627905092="http://tns.tibco.com/bw/json/1688627905092" xmlns:json_1688749564835="http://tns.tibco.com/bw/json/1688749564835" xmlns:json_1688755571402="http://tns.tibco.com/bw/json/1688755571402" xmlns:property="http://ns.tibco.com/bw/property" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_JtWmMJcXEeu-X61Lj0UltQ" targetNamespace="http://tns.tibco.com/bw/composite/InboundPartnerEventsV1.module" name="InboundPartnerEventsV1.module" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_-aTMcDJ6Ee697uI_zw_i0g" name="v1-inboundpartner-kore-webhookevents-chathistory" promote="ComponentKoreSystemWebhookEvents/v1-inboundpartner-kore-webhookevents-chathistory">
+    <sca:interface.wsdl xmi:id="_-aZ6IDJ6Ee697uI_zw_i0g" interface="http://xmlns.example.com/20230803235704PLT#wsdl.interface(v1-inboundpartner-kore-webhookevents-chathistory)" scaext:wsdlLocation="../Processes/KoreWebhookEvents/KoreSystemWebhookEvents.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_-ah18DJ6Ee697uI_zw_i0g" name="RestService2" path="/v1/inboundpartner/kore/webhookevents/chathistory" docBasePath="http://localhost:7777/InboundPartnerEventsV1.module" docResourcePath="KoreWebhookEvents" basePath="/" connector="Inboundpartnereventsv1.module.HTTPConnectorResource" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/KoreWebhookEvents.KoreSystemWebhookEvents-KoreWebhookEvents.json">
+      <operation xmi:id="_-anVgDJ6Ee697uI_zw_i0g" operationName="post" nickname="post-v1-inboundpartner-kore-webhookevents-chathistory" httpMethod="POST" notes="postKoreWebhookEvents" responseStyle="element" requestStyle="element" outputPartName="item">
+        <parameters xmi:id="_LaynQDJ7Ee697uI_zw_i0g">
+          <parameterMapping xmi:id="_LaynQTJ7Ee697uI_zw_i0g" parameterName="requestingApplication" parameterType="Header" dataType="string"/>
+          <parameterMapping xmi:id="_OX21UDJ7Ee697uI_zw_i0g" parameterName="messageid" parameterType="Header" dataType="string"/>
+          <parameterMapping xmi:id="_RcjVYDJ7Ee697uI_zw_i0g" parameterName="correlationid" parameterType="Header" dataType="string"/>
+        </parameters>
+        <responseStatus xmi:id="_v7Zf0DKvEe6Lo8Hr51QNIA" statusCode="200" reasonPhrase="OK" dataType="string"/>
+        <responseStatus xmi:id="_woQl0DKvEe6Lo8Hr51QNIA" statusCode="400" reasonPhrase="Bad Request" elementQName="json_1688755571402:Error"/>
+        <responseStatus xmi:id="_w5KIkDKvEe6Lo8Hr51QNIA" statusCode="404" reasonPhrase="Not Found" elementQName="json_1688755571402:Error"/>
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <import xmi:id="_70ueQDKvEe6Lo8Hr51QNIA" importType="http://www.w3.org/2001/XMLSchema" namespace="http://tns.tibco.com/bw/json/1688749564835"/>
+      <import xmi:id="_Vmmg4DKwEe6Lo8Hr51QNIA" importType="http://www.w3.org/2001/XMLSchema" namespace="http://tns.tibco.com/bw/json/1688755571402"/>
+      <import xmi:id="_-go2YEbxEe6fnd9w73p3cw" importType="http://www.w3.org/2001/XMLSchema" namespace="http://tns.tibco.com/bw/REST" location="../Schemas/RESTSchema.xsd"/>
+      <advancedConfig xmi:id="_-ah18TJ6Ee697uI_zw_i0g" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_-anVgTJ6Ee697uI_zw_i0g" bindingName="RestService2"/>
+  </sca:service>
+  <sca:service xmi:id="_AkkBwH5wEe6TD7n-fstfRw" name="eeronetworkeventv1-inboundpartner-eero-webhookevents-networkevent" promote="ComponentEeroNetworkEvent/eeronetworkeventv1-inboundpartner-eero-webhookevents-networkevent">
+    <sca:interface.wsdl xmi:id="_AkyrQH5wEe6TD7n-fstfRw" interface="http://xmlns.example.com/20231108145003PLT#wsdl.interface(eeronetworkeventv1-inboundpartner-eero-webhookevents-networkevent)" scaext:wsdlLocation="../Processes/EeroWebhookEvents/EeroNetworkEvent.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_AlE_IH5wEe6TD7n-fstfRw" name="RestService" path="/v1/inboundpartner/eero/webhookevents/networkevent" docBasePath="http://localhost:7777/InboundPartnerEventsV1.module" docResourcePath="Eeronetworkevent" basePath="/" connector="Inboundpartnereventsv1.module.HTTPConnectorResource" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/EeroWebhookEvents.EeroNetworkEvent-Eeronetworkevent.json">
+      <operation xmi:id="_AlE_In5wEe6TD7n-fstfRw" operationName="post" nickname="post-eeronetworkeventv1-inboundpartner-eero-webhookevents-networkevent" httpMethod="POST" notes="postEeronetworkevent" responseStyle="element" outputPartName="item">
+        <parameters xmi:id="_Vt4S8H5yEe6TD7n-fstfRw">
+          <parameterMapping xmi:id="_Vt4S8X5yEe6TD7n-fstfRw" parameterName="requestingApplication" parameterType="Header" dataType="string"/>
+          <parameterMapping xmi:id="_ZnWe4H5yEe6TD7n-fstfRw" parameterName="messageid" parameterType="Header" dataType="string"/>
+          <parameterMapping xmi:id="_c2dfMH5yEe6TD7n-fstfRw" parameterName="correlationid" parameterType="Header" dataType="string"/>
+        </parameters>
+        <responseStatus xmi:id="_mAQKsH5xEe6TD7n-fstfRw" statusCode="200" reasonPhrase="OK" dataType="string"/>
+        <responseStatus xmi:id="_mN6zQH5xEe6TD7n-fstfRw" statusCode="400" reasonPhrase="Bad Request" elementQName="json_1688755571402:Error"/>
+        <responseStatus xmi:id="_sao0MH5xEe6TD7n-fstfRw" statusCode="404" reasonPhrase="Not Found" elementQName="json_1688755571402:Error"/>
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <import xmi:id="_sCOUMH5xEe6TD7n-fstfRw" importType="http://www.w3.org/2001/XMLSchema" namespace="http://tns.tibco.com/bw/json/1688755571402"/>
+      <advancedConfig xmi:id="_AlE_IX5wEe6TD7n-fstfRw" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_AlE_I35wEe6TD7n-fstfRw" bindingName="RestService"/>
+  </sca:service>
+  <sca:property xmi:id="_J3_v8JcXEeu-X61Lj0UltQ" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_J4DaUJcXEeu-X61Lj0UltQ" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_J4FPgJcXEeu-X61Lj0UltQ" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_J4HEsJcXEeu-X61Lj0UltQ" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_J4Jg8JcXEeu-X61Lj0UltQ" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_J4LWIJcXEeu-X61Lj0UltQ" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_J4MkQJcXEeu-X61Lj0UltQ" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_J4OZcJcXEeu-X61Lj0UltQ" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_J4QOoJcXEeu-X61Lj0UltQ" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_ykwQgJemEeujj9h4LRjThw" name="/InboundPartnerEventsV1/Connections/JMSConnection/jndiContextURL" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_2q0uAJemEeujj9h4LRjThw" name="/InboundPartnerEventsV1/Connections/JMSConnection/userName" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_4QGCsJemEeujj9h4LRjThw" name="/InboundPartnerEventsV1/Connections/JMSConnection/password" type="property:password" scaext:simpleValue="#!vad/wvSL6ecKKCeMkLQMdQ==" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_0ioxQO5pEeyIUeXe-MdyRw" name="/InboundPartnerEventsV1/Connections/Destinations/Topics/esbSalesRabbitTopic" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_uMOOoFPUEe6WsOiNY4Q2nw" name="/InboundPartnerEventsV1/Connections/Destinations/Topics/esbKoreWebHookTopic" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="__eOG8H5-Ee6TD7n-fstfRw" name="/InboundPartnerEventsV1/Connections/Destinations/Topics/esbEeroWebHookTopic" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_7v-h8DJ_Ee697uI_zw_i0g" name="/InboundPartnerEventsV1/Connections/Destinations/Queues/EDWKoreSystemQueue" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_-rI7UDtuEe6UqtuKBbpOxw" name="/InboundPartnerEventsV1/Connections/Destinations/Queues/EDWSalesRabbitQueue" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_oRvCoKg7EeuXJJxv8Cgz2A" name="/InboundPartnerEventsV1/Connections/HttpConnector/host" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_vBBlIKg7EeuXJJxv8Cgz2A" name="/InboundPartnerEventsV1/Connections/HttpConnector/port" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_wLrn4AF1Ee6l36KgCEWrNA" name="/InboundPartnerEventsV1/Connections/SalesRabbit/host" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_3FrlkAF1Ee6l36KgCEWrNA" name="/InboundPartnerEventsV1/Connections/SalesRabbit/port" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_3MBeIAF1Ee6l36KgCEWrNA" name="/InboundPartnerEventsV1/Connections/SalesRabbit/timeout" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_FhsCwDt3Ee6UqtuKBbpOxw" name="/InboundPartnerEventsV1/Connections/SalesRabbit/TimeInterval" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_-1cGwEEUEe6eG5xUMVD6Iw" name="/InboundPartnerEventsV1/Connections/SalesRabbit/lastModifiedDays" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="__MbqcEEUEe6eG5xUMVD6Iw" name="/InboundPartnerEventsV1/Connections/SalesRabbit/lastModifiedMinutes" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="__YvoIEEUEe6eG5xUMVD6Iw" name="/InboundPartnerEventsV1/Connections/SalesRabbit/IsDays" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_mcJ_4LB_Ee6TNI_s2oiIzw" name="/InboundPartnerEventsV1/Connections/SalesRabbit/hostname" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_aqkJQDIcEe64mJdGUpun1g" name="/InboundPartnerEventsV1/Connections/Kore/host" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_ctLhQDIcEe64mJdGUpun1g" name="/InboundPartnerEventsV1/Connections/Kore/port" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_c0lw0DIcEe64mJdGUpun1g" name="/InboundPartnerEventsV1/Connections/Kore/timeout" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_c8-QwDIcEe64mJdGUpun1g" name="/InboundPartnerEventsV1/Connections/Kore/uri" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_gDhaoH5-Ee6TD7n-fstfRw" name="/InboundPartnerEventsV1/Connections/Eero/host" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_oryQ8H5-Ee6TD7n-fstfRw" name="/InboundPartnerEventsV1/Connections/Eero/port" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_v4UJEH5-Ee6TD7n-fstfRw" name="/InboundPartnerEventsV1/Connections/Eero/timeout" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:component xmi:id="_-aL3sDJ6Ee697uI_zw_i0g" name="ComponentKoreSystemWebhookEvents" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_-aL3sTJ6Ee697uI_zw_i0g" processName="KoreWebhookEvents.KoreSystemWebhookEvents"/>
+    <sca:service xmi:id="_-aPiEDJ6Ee697uI_zw_i0g" name="v1-inboundpartner-kore-webhookevents-chathistory">
+      <sca:interface.wsdl xmi:id="_-aQwMDJ6Ee697uI_zw_i0g" interface="http://xmlns.example.com/20230803235704PLT#wsdl.interface(v1-inboundpartner-kore-webhookevents-chathistory)" scaext:wsdlLocation="../Processes/KoreWebhookEvents/KoreSystemWebhookEvents.bwp"/>
+    </sca:service>
+  </sca:component>
+  <sca:component xmi:id="_ewJTcDtwEe6UqtuKBbpOxw" name="ComponentRetriveSalesLeadData" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_ewJTcTtwEe6UqtuKBbpOxw" processName="SalesRabbitWebhookevents.RetriveSalesLeadData"/>
+  </sca:component>
+  <sca:component xmi:id="_AkV_UH5wEe6TD7n-fstfRw" name="ComponentEeroNetworkEvent" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_AkV_UX5wEe6TD7n-fstfRw" processName="EeroWebhookEvents.EeroNetworkEvent"/>
+    <sca:service xmi:id="_AkdUEH5wEe6TD7n-fstfRw" name="eeronetworkeventv1-inboundpartner-eero-webhookevents-networkevent">
+      <sca:interface.wsdl xmi:id="_AkfwUH5wEe6TD7n-fstfRw" interface="http://xmlns.example.com/20231108145003PLT#wsdl.interface(eeronetworkeventv1-inboundpartner-eero-webhookevents-networkevent)" scaext:wsdlLocation="../Processes/EeroWebhookEvents/EeroNetworkEvent.bwp"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>

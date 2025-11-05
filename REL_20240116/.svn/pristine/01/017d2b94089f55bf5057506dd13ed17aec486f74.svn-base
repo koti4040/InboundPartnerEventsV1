@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:id="http://www.tibco.com/ws/2013/11/identity" xmlns:jms="http://xsd.tns.tibco.com/bw/models/sharedresource/jms" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmlns:sca_ext="http://www.tibco.com/ns/sca/201311" xmlns:sslclient="http://xsd.tns.tibco.com/bw/sharedresource/trinity/models/sslclient" xmi:id="_RW2hMZemEeujj9h4LRjThw" name="Inboundpartnereventsv1.module.JMSConnectionResource" type="jms:JMSConnectionFactory">
+  <identitySet xmi:id="_IQI-4JenEeujj9h4LRjThw" appliesTo="namedResource" name="HttpClientIdentitySet" provides="confidentiality">
+    <sca_ext:intentMap xmi:id="_IQI-4ZenEeujj9h4LRjThw" provides="sca_ext:confidentiality">
+      <sca_ext:qualifier xmi:id="_IQI-4penEeujj9h4LRjThw" name="transport">
+        <id:IdentityReference xmi:id="_IQJl8JenEeujj9h4LRjThw" URI="SSLclient.SSLClient" type="sslclient:SSLClientConfiguration"/>
+      </sca_ext:qualifier>
+    </sca_ext:intentMap>
+  </identitySet>
+  <jndi:configuration xsi:type="jms:DirectConnectionFactory" xmi:id="_gd4AUBnhEe6ztYW3WjMdFQ" factoryType="Queue/Topic">
+    <substitutionBindings xmi:id="_jMHvQBnhEe6ztYW3WjMdFQ" template="providerURL" propName="/InboundPartnerEventsV1/Connections/JMSConnection/jndiContextURL"/>
+    <userCredentials xmi:id="__nXncB89Ee63Yf1m6wixxQ">
+      <substitutionBindings xmi:id="_CvQlcB8-Ee63Yf1m6wixxQ" template="username" propName="/InboundPartnerEventsV1/Connections/JMSConnection/userName"/>
+      <substitutionBindings xmi:id="_FzxfUB8-Ee63Yf1m6wixxQ" template="password" propName="/InboundPartnerEventsV1/Connections/JMSConnection/password"/>
+    </userCredentials>
+  </jndi:configuration>
+</jndi:namedResource>
